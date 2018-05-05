@@ -24,7 +24,7 @@ class FragmentRegistrarEncargado : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView")
-        return inflater!!.inflate(R.layout.fragment_fragment_registrar_encargado,container,false)
+        return inflater!!.inflate(R.layout.fragment_registrar_encargado,container,false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

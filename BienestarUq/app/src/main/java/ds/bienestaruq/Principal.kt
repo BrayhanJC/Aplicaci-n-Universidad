@@ -26,10 +26,11 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
         setSupportActionBar(toolbar)
-        fab.setOnClickListener { view ->
+
+/*        fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
-        }
+        }*/
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -86,17 +87,17 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             R.id.nav_manage -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 val fragment = FragmentRegistrarEncargado()
-                transaction.replace(R.id.content_principal_encargado, fragment)
+                transaction.replace(R.id.content_principal, fragment)
                 transaction.addToBackStack(null)
                 transaction.commit()
             }
             R.id.nav_share -> {
 
-                    val transaction = supportFragmentManager.beginTransaction()
-                    val fragment = FragmentRegistroServicios()
-                    transaction.replace(R.id.content_principal, fragment)
-                    transaction.addToBackStack(null)
-                    transaction.commit()
+                val transaction = supportFragmentManager.beginTransaction()
+                val fragment = FragmentRegistroServicios()
+                transaction.replace(R.id.content_principal, fragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
 
 
             }
