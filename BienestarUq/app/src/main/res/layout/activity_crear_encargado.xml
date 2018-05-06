@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRegistrarEncargado"
+    android:background="@drawable/fondo_aplicacion"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+        <EditText
+            android:id="@+id/txtCedulaRegistrarEncargado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="Cédula"
+            />
+
+
+        <EditText
+            android:id="@+id/txtNombresRegistrarEncargado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="Nombres"
+            />
+
+
+
+        <EditText
+            android:id="@+id/txtApellidoRegistrarEncargado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="Apellidos"
+            />
+
+        <EditText
+            android:id="@+id/txtTelefonoRegistrarEncargado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="Télefono"
+            />
+
+
+        <Button
+            android:id="@+id/btnGuardarEncargado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Guardar"
+            android:background="@drawable/fondo_boton"
+            android:elevation="40dp"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

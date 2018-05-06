@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRegistroServicios"
+    android:background="@drawable/fondo_aplicacion"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <ImageView
+                    android:id="@+id/lblImageRegistrarServicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher_icon_user" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                >
+
+
+                <EditText
+                    android:id="@+id/txtCodigoRegistrarServicios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/fondo_texto"
+                    android:layout_gravity="center"
+                    android:hint="Código"
+                    android:textSize="25dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/txtNombreRegistrarServicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/fondo_texto"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:hint="Nombres"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/txtDescripcionRegistrarServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="Descripción"
+            />
+
+
+
+        <EditText
+            android:id="@+id/txtUbicacionRegistrarServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="Ubicación"
+            />
+        <EditText
+            android:id="@+id/txtRecursosDisponiblesRegistrarServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="Recursos Disponibles"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <EditText
+                    android:id="@+id/txtFechaInicialRegistrarServicios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+
+
+                    android:background="@drawable/fondo_texto"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    android:inputType="datetime"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:hint="Empieza"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></LinearLayout>
+                <EditText
+                    android:id="@+id/txtFechaFinalRegistrarServicios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/fondo_texto"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    android:inputType="datetime"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:hint="Finaliza"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGuardarEncargado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Guardar"
+            android:background="@drawable/fondo_boton"
+            android:elevation="40dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

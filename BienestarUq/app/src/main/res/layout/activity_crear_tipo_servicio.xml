@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRegistrarEncargado"
+    android:background="@drawable/fondo_aplicacion"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+
+        <EditText
+            android:id="@+id/txtCodigoTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="@string/txtCodigoTipoServicio"
+            />
+
+        <EditText
+            android:id="@+id/txtNombreTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="@string/txtNombreTipoServicio"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGuardarTipoServicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/btnGuardarTipoServicio"
+        android:background="@drawable/fondo_boton"
+        android:elevation="40dp"/>
+</FrameLayout>

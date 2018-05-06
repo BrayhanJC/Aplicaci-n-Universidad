@@ -1,6 +1,7 @@
 package ds.bienestaruq
 
 import android.app.Fragment
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -12,8 +13,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Adapter
 import android.widget.LinearLayout
+import fragment.FragmentTipoServicio
 import kotlinx.android.synthetic.main.activity_principal.*
 import kotlinx.android.synthetic.main.app_bar_principal.*
 import recursos.AdaptadorServiciosBienestar
@@ -27,10 +30,21 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         setContentView(R.layout.activity_principal)
         setSupportActionBar(toolbar)
 
-/*        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }*/
+        fab_crear_encargado.setOnClickListener { view ->
+            val intent = Intent(this, CrearEncargado::class.java)
+            startActivity(intent)
+        }
+
+        fab_crear_servicio.setOnClickListener { view ->
+            val intent = Intent(this, CrearServicio::class.java)
+            startActivity(intent)
+        }
+
+
+        fab_crear_tipo_servicio.setOnClickListener { view ->
+            val intent = Intent(this, CrearTipoServicio::class.java)
+            startActivity(intent)
+        }
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
@@ -64,14 +78,21 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         }
     }
 
+
+
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
 
         when (item.itemId) {
-            R.id.nav_camera -> {
+
+
+/*            R.id.nav_camera -> {
                 // Handle the camera action
-            }
-            R.id.nav_gallery -> {
+            }*/
+
+
+            R.id.nav_solicitud_servicios -> {
                 val recyclerView:RecyclerView=findViewById(R.id.recycler)
                 recyclerView.layoutManager=LinearLayoutManager(this, LinearLayout.VERTICAL, false)
                 val x=ArrayList<ServiciosBienestar>()
@@ -81,29 +102,32 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
                 val adapter=AdaptadorServiciosBienestar(x)
                 recyclerView.adapter=adapter
             }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_manage -> {
-                val transaction = supportFragmentManager.beginTransaction()
-                val fragment = FragmentRegistrarEncargado()
-                transaction.replace(R.id.content_principal, fragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
-            }
-            R.id.nav_share -> {
-
+            R.id.nav_lista_servicios -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 val fragment = FragmentRegistroServicios()
                 transaction.replace(R.id.content_principal, fragment)
                 transaction.addToBackStack(null)
                 transaction.commit()
 
+            }
+
+            R.id.nav_lista_encargados -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                val fragment = FragmentRegistrarEncargado()
+                transaction.replace(R.id.content_principal, fragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
+            }
+            R.id.nav_tipo_servicio -> {
+
+                val transaction = supportFragmentManager.beginTransaction()
+                val fragment = FragmentTipoServicio()
+                transaction.replace(R.id.content_principal, fragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
 
             }
-            R.id.nav_send -> {
 
-            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)

@@ -4,25 +4,27 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <!--
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_action_homee"
             android:title="Principal"
             />
+        -->
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_solicitud_servicios"
             android:icon="@drawable/ic_action_solicitud_servicios"
             android:title="Solicitudes Servicios" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_lista_servicios"
             android:icon="@drawable/ic_action_servicios"
             android:title="Servicios" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_lista_encargados"
             android:icon="@drawable/ic_action_encargados"
             android:title="Encargados" />
         <item
-            android:id="@+id/tipo_servicio"
+            android:id="@+id/nav_tipo_servicio"
             android:icon="@drawable/ic_menu_manage"
             android:title="Tipo Servicio" />
 
@@ -32,17 +34,5 @@
             android:title="Salir" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
 
 </menu>

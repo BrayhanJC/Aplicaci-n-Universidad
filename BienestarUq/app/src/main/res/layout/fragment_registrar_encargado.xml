@@ -29,69 +29,10 @@
             android:inputType="text"
             android:singleLine="true"
             android:gravity="center"
-            android:hint="Cédula"
+            android:hint="Lista Encargados"
             />
 
 
-        <EditText
-            android:id="@+id/txtNombresRegistrarEncargado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/fondo_texto"
-            android:layout_gravity="center"
-            android:textSize="25dp"
-            android:inputType="text"
-            android:singleLine="true"
-            android:gravity="center"
-            android:hint="Nombres"
-            />
-
-
-
-        <EditText
-            android:id="@+id/txtApellidoRegistrarEncargado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/fondo_texto"
-            android:layout_gravity="center"
-            android:textSize="25dp"
-            android:inputType="text"
-            android:singleLine="true"
-            android:gravity="center"
-            android:hint="Apellidos"
-            />
-
-        <EditText
-            android:id="@+id/txtTelefonoRegistrarEncargado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/fondo_texto"
-            android:layout_gravity="center"
-            android:textSize="25dp"
-            android:inputType="text"
-            android:singleLine="true"
-            android:gravity="center"
-            android:hint="Télefono"
-            />
-
-
-        <Button
-            android:id="@+id/btnGuardarEncargado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:text="Guardar"
-            android:background="@drawable/fondo_boton"
-            android:elevation="40dp"/>
 
     </LinearLayout>
 
