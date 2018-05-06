@@ -67,8 +67,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
-                android:text="Ingresar"
                 android:onClick="ventanaPrincipal"
+                android:text="Ingresar"
                 android:textColor="#FFFFFF"
                 android:textSize="25dp" />
         </RelativeLayout>
@@ -81,20 +81,22 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@id/txtContrasena"
         android:layout_marginBottom="138dp"
+        android:autoLink="all"
+        android:onClick="ventanaRecuperarContrasena"
         android:text="Recuperar Contraseña"
         android:textColor="#606060"
-        android:textSize="17dp"
-        />
+        android:textSize="17dp" />
+
     <TextView
         android:id="@+id/txtRegistrarse"
         android:layout_width="222dp"
         android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignLeft="@id/txtContrasena"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="138dp"
+        android:onClick="ventanaRegistrarse"
         android:text="Registrarse"
-        android:textSize="17dp"
         android:textColor="#606060"
-        />
+        android:textSize="17dp" />
 
 </RelativeLayout>

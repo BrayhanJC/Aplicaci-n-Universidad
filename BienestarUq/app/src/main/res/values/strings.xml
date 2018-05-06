@@ -8,7 +8,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
+    !-- Crear Encargado -->
     <string name="txtCedula">Cedula</string>
     <string name="txtNombres">Nombres</string>
     <string name="txtApellidos">Apellidos</string>
@@ -17,12 +18,45 @@
     <string name="lblCrearEncargado">Crear Encargado</string>
     <string name="lblCrearServicio">Crear Servicio</string>
     <string name="lblCrearTipoServicio">Crear Tipo Servicio</string>
+    <string name="toolbarRegistroEncargado">Registrar Encargado</string>
+
+
+    <!-- Crear servicio -->
+    <string name="txtCodigoRegistrarServicio">Código</string>
+    <string name="txtNombreRegistrarServicio">Nombre</string>
+    <string name="txtDescripcionRegistrarServicio">Descripción</string>
+    <string name="txtUbicacionRegistrarServicio">Ubicación</string>
+    <string name="txtRecursosDisponiblesRegistrarServicio">Recursos Disponibles</string>
+    <string name="txtFechaInicialRegistrarServicio">Fecha inicial</string>
+    <string name="txtFechaFinalRegistrarServicio">Fecha Final</string>
+    <string name="btnGuardarRegistrarServicio">Guardar</string>
+    <string name="toolbarRegistrarServicio">Registrar Servicio</string>
 
 
     <!-- Crear tipo servicio -->
     <string name="txtCodigoTipoServicio">Código</string>
     <string name="txtNombreTipoServicio">Tipo Servicio</string>
     <string name="btnGuardarTipoServicio">Guardar</string>
+    <string name="toolbarTipoServicio">Registro Tipo Servicio</string>
+
+
+    <!-- Registro cliente -->
+    <string name="toolbarRegistroCliente">Registrarse</string>
+    <string name="txtCedulaRegistroCliente">Cédula</string>
+    <string name="txtTipoRegistroCliente">Tipo</string>
+    <string name="txtNombresRegistroCliente">Nombres</string>
+    <string name="txtApellidosRegistroCliente">Apellidos</string>
+    <string name="txtContrasenaRegistroCliente">Contraseña</string>
+    <string name="txtRepetirContrasenaRegistroCliente">Repetir Contraseña</string>
+    <string name="txtDependenciaRegistroCliente">Dependencia</string>
+    <string name="txtTelefonoRegistroCliente">Télefono</string>
+    <string name="btnGuardarRegistroCliente">Guardar</string>
+
+
+    <!-- Recuperar Contrasena-->
+    <string name="txtRecuperarContrasena">Última Contraseña</string>
+    <string name="btnRecuperarContrasena">Recuperar</string>
+    <string name="toolbarRecuperarContrasena">Recuperar</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

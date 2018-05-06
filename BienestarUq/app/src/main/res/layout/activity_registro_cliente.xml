@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_aplicacion"
+    tools:context=".FragmentRegistroServicios"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarRegistroCliente"
+        android:background="@color/colorverde">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/toolbarRegistroCliente"
+            android:textAlignment="center"
+            android:textSize="25dp"
+
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+           >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/lblImageRegistrarServicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/foto" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/txtCedulaRegistroCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/fondo_texto"
+                    android:gravity="center"
+                    android:hint="@string/txtCedulaRegistroCliente"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/txtTipoRegistroCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/fondo_texto"
+                    android:gravity="center"
+                    android:hint="@string/txtTipoRegistroCliente"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="25dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/txtNombresRegistroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:gravity="center"
+            android:hint="@string/txtNombresRegistroCliente"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="25dp" />
+
+
+        <EditText
+            android:id="@+id/txtApellidosRegistroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:gravity="center"
+            android:hint="@string/txtApellidosRegistroCliente"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/txtContrasenaRegistroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:gravity="center"
+            android:hint="@string/txtContrasenaRegistroCliente"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/txtRepetirContrasenaRegistroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:gravity="center"
+            android:hint="@string/txtRepetirContrasenaRegistroCliente"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/txtDependenciaRegistroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:gravity="center"
+            android:hint="@string/txtDependenciaRegistroCliente"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="25dp" />
+
+        <EditText
+            android:id="@+id/txtTelefonoRegistroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:gravity="center"
+            android:hint="@string/txtTelefonoRegistroCliente"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="25dp" />
+
+
+        <Button
+            android:id="@+id/btnGuardarRegistroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fondo_boton"
+            android:elevation="40dp"
+            android:gravity="center"
+            android:text="@string/btnGuardarRegistroCliente"
+            android:textSize="25dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -12,13 +12,13 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbarTipoServicio"
+        android:id="@+id/toolbarRecuperarContrasena"
         android:background="@color/colorverde">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/toolbarTipoServicio"
+            android:text="@string/toolbarRecuperarContrasena"
             android:textAlignment="center"
             android:textSize="25dp"
 
@@ -30,26 +30,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
-        android:padding="50dp">
+        android:padding="20dp">
 
-
-        <EditText
-            android:id="@+id/txtCodigoTipoServicio"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/fondo_texto"
-            android:layout_gravity="center"
-            android:textSize="25dp"
-            android:inputType="text"
-            android:singleLine="true"
-            android:gravity="center"
-            android:hint="@string/txtCodigoTipoServicio"
-            />
+            android:layout_marginTop="50dp"
+            android:textAlignment="gravity"
+            android:textSize="18dp"
+            android:text="Ingresa la última contraseña que recuerdes haber usado en esta aplicación." />
 
         <EditText
-            android:id="@+id/txtNombreTipoServicio"
+            android:id="@+id/txtRecuperarContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -60,11 +53,13 @@
             android:inputType="text"
             android:singleLine="true"
             android:gravity="center"
-            android:hint="@string/txtNombreTipoServicio"
+            android:hint="@string/txtRecuperarContrasena"
             />
 
+
+
         <Button
-            android:id="@+id/btnGuardarTipoServicio"
+            android:id="@+id/btnRecuperarContrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -72,9 +67,11 @@
             android:textSize="25dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:text="@string/btnGuardarTipoServicio"
+            android:text="@string/btnRecuperarContrasena"
             android:background="@drawable/fondo_boton"
             android:elevation="40dp"/>
+
+
     </LinearLayout>
 
 

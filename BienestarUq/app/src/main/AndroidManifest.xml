@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ds.bienestaruq">
-
+    <!--Agregando permisos para que se pueda escoger una imagen del celular -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,7 +29,9 @@
         <activity
             android:name=".Usuario"
             android:label="@string/title_activity_usuario"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".RegistroCliente" />
+        <activity android:name=".RecuperarContrasena"></activity>
     </application>
 
 </manifest>

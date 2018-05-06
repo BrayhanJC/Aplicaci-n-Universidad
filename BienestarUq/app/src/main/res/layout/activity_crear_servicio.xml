@@ -8,13 +8,27 @@
     android:background="@drawable/fondo_aplicacion"
     >
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarRegistroCliente"
+        android:background="@color/colorverde">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/toolbarRegistrarServicio"
+            android:textAlignment="center"
+            android:textSize="25dp"
+
+            />
+    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="20dp">
 
 
         <LinearLayout
@@ -29,11 +43,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="40dp">
                 <ImageView
                     android:id="@+id/lblImageRegistrarServicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="elegirImagen"
                     android:src="@mipmap/ic_launcher_icon_user" />
 
 
@@ -49,14 +64,14 @@
 
 
                 <EditText
-                    android:id="@+id/txtCodigoRegistrarServicios"
+                    android:id="@+id/txtCodigoRegistrarServicio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="50dp"
                     android:background="@drawable/fondo_texto"
                     android:layout_gravity="center"
-                    android:hint="Código"
+                    android:hint="@string/txtCodigoRegistrarServicio"
                     android:textSize="25dp"
                     android:inputType="text"
                     android:singleLine="true"
@@ -75,7 +90,7 @@
                     android:inputType="text"
                     android:singleLine="true"
                     android:gravity="center"
-                    android:hint="Nombres"
+                    android:hint="@string/txtNombreRegistrarServicio"
                     />
             </LinearLayout>
 
@@ -95,7 +110,7 @@
             android:inputType="text"
             android:singleLine="true"
             android:gravity="center"
-            android:hint="Descripción"
+            android:hint="@string/txtDescripcionRegistrarServicio"
             />
 
 
@@ -112,7 +127,7 @@
             android:inputType="text"
             android:singleLine="true"
             android:gravity="center"
-            android:hint="Ubicación"
+            android:hint="@string/txtUbicacionRegistrarServicio"
             />
         <EditText
             android:id="@+id/txtRecursosDisponiblesRegistrarServicio"
@@ -126,7 +141,7 @@
             android:inputType="text"
             android:singleLine="true"
             android:gravity="center"
-            android:hint="Recursos Disponibles"
+            android:hint="@string/txtRecursosDisponiblesRegistrarServicio"
             />
 
 
@@ -145,7 +160,7 @@
                 android:orientation="horizontal"
                 >
                 <EditText
-                    android:id="@+id/txtFechaInicialRegistrarServicios"
+                    android:id="@+id/txtFechaInicialRegistrarServicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -158,14 +173,14 @@
                     android:inputType="datetime"
                     android:singleLine="true"
                     android:gravity="center"
-                    android:hint="Empieza"
+                    android:hint="@string/txtFechaInicialRegistrarServicio"
                     />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"></LinearLayout>
                 <EditText
-                    android:id="@+id/txtFechaFinalRegistrarServicios"
+                    android:id="@+id/txtFechaFinalRegistrarServicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -176,14 +191,14 @@
                     android:inputType="datetime"
                     android:singleLine="true"
                     android:gravity="center"
-                    android:hint="Finaliza"
+                    android:hint="@string/txtFechaFinalRegistrarServicio"
                     />
             </LinearLayout>
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnGuardarEncargado"
+            android:id="@+id/btnGuardarRegistrarServicio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -191,11 +206,9 @@
             android:textSize="25dp"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:text="Guardar"
+            android:text="@string/btnGuardarRegistrarServicio"
             android:background="@drawable/fondo_boton"
             android:elevation="40dp"/>
-
-
 
 
     </LinearLayout>

@@ -25,22 +25,44 @@ class Login : AppCompatActivity() , View.OnClickListener{
     }
 
     /***
-     * Funcion que permite pasar a la actividad principal de la aplicacion
+     * Funcion que permite pasar a la actividad principal de la aplicacion vista administrador o cliente
      */
     fun  ventanaPrincipal(view: View){
 
         editTextName =findViewById(R.id.txtUsuario) as EditText
         val name=editTextName.text.toString()
 
-
+        //vista administrador
         if (name.equals("1")){
             val intent = Intent(this, Principal::class.java)
             startActivity(intent)
         }
+        //vista cliente
         if (name.equals("2")){
             val intent = Intent(this, Usuario::class.java)
             startActivity(intent)
         }
+
+    }
+
+
+    /***
+     * funcion que permite dirigirsea la ventana para recuperar la contraseña
+     */
+    fun  ventanaRecuperarContrasena(view: View){
+
+            val intent = Intent(this, RecuperarContrasena::class.java)
+            startActivity(intent)
+    }
+
+
+    /***
+     * funcion que permite dirigirsea la ventana para registrarse como cliente o administrador
+     */
+    fun  ventanaRegistrarse(view: View){
+
+            val intent = Intent(this, RegistroCliente::class.java)
+            startActivity(intent)
 
     }
 }
