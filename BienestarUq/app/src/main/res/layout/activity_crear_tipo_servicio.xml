@@ -47,18 +47,19 @@
             android:hint="@string/txtNombreTipoServicio"
             />
 
+        <Button
+            android:id="@+id/btnGuardarTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="@string/btnGuardarTipoServicio"
+            android:background="@drawable/fondo_boton"
+            android:elevation="40dp"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnGuardarTipoServicio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:text="@string/btnGuardarTipoServicio"
-        android:background="@drawable/fondo_boton"
-        android:elevation="40dp"/>
+
 </FrameLayout>

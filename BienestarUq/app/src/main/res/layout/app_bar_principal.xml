@@ -40,9 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         app:fab_labelStyle="@style/Etiquetas"
-        app:fab_addButtonColorNormal="?attr/colorPrimary"
+        app:fab_addButtonColorNormal="@color/colorverde"
         app:fab_addButtonSize="normal"
-        app:fab_labelsPosition="left">
+        app:fab_labelsPosition="left"
+        >
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_crear_encargado"
@@ -51,7 +52,8 @@
             app:fab_colorNormal="#FFFFFF"
             app:fab_icon="@drawable/ic_crear_encargado"
             app:fab_size="normal"
-            app:fab_title="@string/lblCrearEncargado" />
+            app:fab_title="@string/lblCrearEncargado"
+            />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_crear_servicio"
