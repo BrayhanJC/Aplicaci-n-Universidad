@@ -22,7 +22,11 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".CrearEncargado" />
         <activity android:name=".CrearServicio" />
-        <activity android:name=".CrearTipoServicio"></activity>
+        <activity android:name=".CrearTipoServicio" />
+        <activity
+            android:name=".Usuario"
+            android:label="@string/title_activity_usuario"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
