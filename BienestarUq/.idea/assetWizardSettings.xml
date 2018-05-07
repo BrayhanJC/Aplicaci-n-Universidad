@@ -119,12 +119,25 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="paddingPercent" value="-5" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                     </map>
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="outputName" value="fotoo" />
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="iconShape" value="VRECT" />
+                                      <entry key="imageAsset" value="C:\Users\BrayhanJaramillo\Desktop\BienestarUq\app\src\main\res\drawable\logou.png" />
+                                      <entry key="outputName" value="icono_aplicacio" />
                                     </map>
                                   </option>
                                 </PersistentState>
