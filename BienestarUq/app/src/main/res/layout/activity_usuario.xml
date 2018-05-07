@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@drawable/side_nav_bar"
     tools:openDrawer="start">
 
     <include
@@ -19,6 +20,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        android:background="@drawable/gradient"
         app:headerLayout="@layout/nav_header_usuario"
         app:menu="@menu/activity_usuario_drawer" />
 

@@ -16,6 +16,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Adapter
 import android.widget.LinearLayout
+import ds.bienestaruq.R.id.action_settings
 import fragment.FragmentTipoServicio
 import kotlinx.android.synthetic.main.activity_principal.*
 import kotlinx.android.synthetic.main.app_bar_principal.*
@@ -29,6 +30,7 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
         setSupportActionBar(toolbar)
+
 
         fab_crear_encargado.setOnClickListener { view ->
             val intent = Intent(this, CrearEncargado::class.java)
@@ -61,6 +63,8 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             super.onBackPressed()
         }
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
