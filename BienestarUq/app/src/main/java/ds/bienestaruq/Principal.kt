@@ -112,11 +112,19 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             }
 
             R.id.nav_lista_encargados -> {
-                val transaction = supportFragmentManager.beginTransaction()
+/*                val transaction = supportFragmentManager.beginTransaction()
                 val fragment = FragmentRegistrarEncargado()
                 transaction.replace(R.id.content_principal, fragment)
                 transaction.addToBackStack(null)
-                transaction.commit()
+                transaction.commit()*/
+                val recyclerView:RecyclerView=findViewById(R.id.recyclerr)
+                recyclerView.layoutManager=LinearLayoutManager(this, LinearLayout.VERTICAL, false)
+                val x=ArrayList<ServiciosBienestar>()
+                x.add(ServiciosBienestar(R.drawable.user_logo, "Martha Lucia", "Administrador", "Secretaria"))
+                x.add(ServiciosBienestar(R.drawable.user_logo, "Katherine Muñoz", "Doctora", "Medicina Interna"))
+                x.add(ServiciosBienestar(R.drawable.user_logo, "Brayhan Andres", "Profesor", "Programacion"))
+                val adapter=AdaptadorServiciosBienestar(x)
+                recyclerView.adapter=adapter
             }
             R.id.nav_tipo_servicio -> {
 
