@@ -44,13 +44,16 @@
                 android:layout_alignParentTop="true"
                 android:orientation="vertical"
                 android:padding="40dp">
-                <ImageView
-                    android:id="@+id/lblImageRegistrarServicio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="elegirImagen"
-                    android:src="@mipmap/ic_launcher_icon_user" />
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher"
+                    android:id="@+id/iv"
+
+                  />
 
             </LinearLayout>
 
