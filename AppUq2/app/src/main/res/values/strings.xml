@@ -1,0 +1,34 @@
+<resources>
+    <!-- Nombre app -->
+    <string name="app_name">Bienestar Uq</string>
+
+    <!--Recuperar Contrasena -->
+    <string name="toolbarRecuperarContrasena">Recuperar Contraseña</string>
+    <string name="lblRecuperarContrasena">Ingresa la última contraseña que recuerdes haber usado en esta aplicación.</string>
+    <string name="txtRecuperarContrasena">Última Contraseña</string>
+    <string name="btnRecuperarContrasena">Recuperar</string>
+
+
+    <!-- Login  -->
+    <string name="txtUsuario">Usuario</string>
+    <string name="txtContrasena">Contraseña</string>
+    <string name="txtIngresar">Ingresar</string>
+    <string name="lblTitulo">Bienestar UQ</string>
+    <string name="lblDescripcion">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</string>
+    <string name="txtRegistrarse">Registrarse</string>
+
+
+    <!-- Registro cliente -->
+    <string name="toolbarRegistroCliente">Registrarse</string>
+    <string name="txtCedulaRegistroCliente">Cédula</string>
+    <string name="txtTipoRegistroCliente">Tipo</string>
+    <string name="txtNombresRegistroCliente">Nombres</string>
+    <string name="txtApellidosRegistroCliente">Apellidos</string>
+    <string name="txtContrasenaRegistroCliente">Contraseña</string>
+    <string name="txtRepetirContrasenaRegistroCliente">Repetir Contraseña</string>
+    <string name="txtDependenciaRegistroCliente">Dependencia</string>
+    <string name="txtTelefonoRegistroCliente">Télefono</string>
+    <string name="btnGuardarRegistroCliente">Guardar</string>
+
+
+</resources>
