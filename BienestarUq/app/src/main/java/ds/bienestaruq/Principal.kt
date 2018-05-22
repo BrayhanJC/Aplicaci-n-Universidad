@@ -1,28 +1,22 @@
 package ds.bienestaruq
 
-import android.app.Fragment
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Adapter
 import android.widget.LinearLayout
-import ds.bienestaruq.R.id.action_settings
 import fragment.FragmentTipoServicio
 import kotlinx.android.synthetic.main.activity_principal.*
 import kotlinx.android.synthetic.main.app_bar_principal.*
 import recursos.AdaptadorServiciosBienestar
 import recursos.ServiciosBienestar
-import java.util.ArrayList
+import java.util.*
 
 class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
 

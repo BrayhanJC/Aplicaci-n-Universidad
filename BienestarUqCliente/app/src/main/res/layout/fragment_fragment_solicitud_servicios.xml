@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.FragmentSolicitudServicios"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/txtFechaSolicitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/txtFechaSolicitud"/>
+
+    <EditText
+        android:id="@+id/txtFiltro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/txtFiltro" />
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAgregar" />
+
+    <Button
+        android:id="@+id/btnVisualizarSolicitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnVisualizarSolicitud" />
+
+</LinearLayout>

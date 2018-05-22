@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- String values menu -->
+    <string name="itemMenuUno">Principal</string>
+    <string name="itemMenuDos">Mi Perfil</string>
+    <string name="itemMenuTres">Historial Servicios</string>
+
+
+
+
+    <!-- String values user -->
+    <string name="txtIdentificacion">Numero Documento</string>
+    <string name="txtTipoUsuario">Tipo Usuario</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="txtApellido">Apellido</string>
+    <string name="txtDependencia">Dependencia</string>
+    <string name="txtTelefono">Telefono</string>
+    <string name="btnGuardar">Guardar</string>
+
+
+    <!-- String value solicitud servicios -->
+    <string name="txtFiltro">Buscar Servicios</string>
+    <string name="txtFechaSolicitud">2018/04/24</string>
+    <string name="btnAgregar">Agregar Solicitud</string>
+    <string name="btnVisualizarSolicitud">Ver Solicitudes</string>
+
+
+    <!-- String value detalle servicio -->
+    <string name="txtCodigo">Codigo Servicio</string>
+    <string name="txtNombreServicio">Nombre Servicio</string>
+    <string name="txtDescripcion">Descripcion</string>
+    <string name="txtRecursosDisponibles">Recursos Disponibles</string>
+    <string name="txtUbicacion">Ubicacion Servicio</string>
+    <string name="txtTipoServicio">Tipo Servicio</string>
+    <string name="btnCancelar">Cancelar Servicio</string>
+
+
+    <!-- String value button options -->
+    <string name="lblCrearSolicitud">Crear Solicitud</string>
+</resources>

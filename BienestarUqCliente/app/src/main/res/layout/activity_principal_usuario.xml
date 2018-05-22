@@ -6,11 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@drawable/side_nav_bar"
     tools:openDrawer="start">
 
     <include
-        layout="@layout/app_bar_usuario"
+        layout="@layout/app_bar_principal_usuario"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -20,8 +19,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@drawable/gradient"
-        app:headerLayout="@layout/nav_header_usuario"
-        app:menu="@menu/activity_usuario_drawer" />
+        app:headerLayout="@layout/nav_header_principal_usuario"
+        app:menu="@menu/activity_principal_usuario_drawer" />
+
 
 </android.support.v4.widget.DrawerLayout>
