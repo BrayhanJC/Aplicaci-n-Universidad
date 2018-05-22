@@ -16,9 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-     <!--   <activity android:name=".ToolBarActivity" /> -->
+        <!-- <activity android:name=".ToolBarActivity" /> -->
         <activity android:name=".RecuperarContrasena" />
-        <activity android:name=".RegistroCliente"></activity>
+        <activity android:name=".RegistroCliente" />
+        <activity
+            android:name=".Principal"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
