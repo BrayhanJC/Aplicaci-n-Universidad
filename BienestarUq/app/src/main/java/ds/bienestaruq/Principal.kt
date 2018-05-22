@@ -3,6 +3,7 @@ package ds.bienestaruq
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
@@ -91,16 +92,21 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
 
             R.id.nav_solicitud_servicios -> {
+
                 val recyclerView:RecyclerView=findViewById(R.id.recycler)
                 recyclerView.layoutManager=LinearLayoutManager(this, LinearLayout.VERTICAL, false)
+
                 val x=ArrayList<ServiciosBienestar>()
+
                 x.add(ServiciosBienestar(R.drawable.user_logo, "Tenis de mesa", "lugar donde se entrena", "cancha"))
                 x.add(ServiciosBienestar(R.drawable.user_logo, "Ajedrez", "lugar donde se entrena", "cancha"))
                 x.add(ServiciosBienestar(R.drawable.user_logo, "Natacion", "lugar donde se entrena", "cancha"))
                 val adapter=AdaptadorServiciosBienestar(x)
                 recyclerView.adapter=adapter
+
             }
             R.id.nav_lista_servicios -> {
+
                 val transaction = supportFragmentManager.beginTransaction()
                 val fragment = FragmentRegistroServicios()
                 transaction.replace(R.id.content_principal, fragment)
@@ -126,11 +132,7 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
             }
             R.id.nav_tipo_servicio -> {
 
-                val transaction = supportFragmentManager.beginTransaction()
-                val fragment = FragmentTipoServicio()
-                transaction.replace(R.id.content_principal, fragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
+                remplazarFragmento(FragmentTipoServicio())
 
             }
 
@@ -139,4 +141,13 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
+    fun remplazarFragmento(fragmento: Fragment)
+    {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.content_principal, fragmento)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
 }
