@@ -28,7 +28,8 @@ class Login : AppCompatActivity() {
 
         //vista administrador
         if (name.equals("1")){
-
+            val intent = Intent(this, Principal::class.java)
+            startActivity(intent)
         }
 
 
@@ -54,6 +55,9 @@ class Login : AppCompatActivity() {
         startActivity(intent)
 
     }
+
+
+
 
 
 }
