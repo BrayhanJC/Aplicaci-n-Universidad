@@ -22,7 +22,10 @@
         <activity
             android:name=".Principal"
             android:label="@string/title_activity_principal"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".CrearEncargado" />
+        <activity android:name=".CrearServicio" />
+        <activity android:name=".CrearTipoServicio"></activity>
     </application>
 
 </manifest>

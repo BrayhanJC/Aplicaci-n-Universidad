@@ -38,4 +38,26 @@
     <string name="action_settings">Settings</string>
 
 
+    <!-- Encargado -->
+    <string name="lblCrearEncargado">Crear Encargado</string>
+    <string name="toolbarRegistroEncargado">Crear Encargado</string>
+
+
+    <!-- Servicios -->
+    <string name="lblCrearServicio">Crear Servicio</string>
+    <string name="txtCodigoRegistrarServicio">Código</string>
+    <string name="txtNombreRegistrarServicio">Nombre</string>
+    <string name="txtDescripcionRegistrarServicio">Descripcion</string>
+    <string name="txtUbicacionRegistrarServicio">Ubicación</string>
+    <string name="txtRecursosDisponibles">Recursos</string>
+    <string name="txtFechaInicialRegistrarServicio">Fecha Inicio</string>
+    <string name="txtFechaFinalRegistrarServicio">Fecha Fin</string>
+    <string name="btnGuardarRegistrarServicio">Guardar</string>
+    <string name="toolbarRegistrarServicio">Crear Servicio</string>
+
+
+    <!-- Tipo de Servicios -->
+    <string name="lblCrearTipoServicio">Crear Tipo Servicio</string>
+
+
 </resources>
