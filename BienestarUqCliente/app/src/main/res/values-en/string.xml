@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- String values menu -->
+    <string name="itemMenuUno">Main</string>
+    <string name="itemMenuDos">My Profile</string>
+    <string name="itemMenuTres">History Services</string>
+
+
+
+
+    <!-- String values user -->
+    <string name="txtIdentificacion">Document Number</string>
+    <string name="txtTipoUsuario">User Type</string>
+    <string name="txtNombre">Name</string>
+    <string name="txtApellido">Surnames</string>
+    <string name="txtDependencia">Depends</string>
+    <string name="txtTelefono">Phone Number</string>
+    <string name="btnGuardar">Save</string>
+
+
+    <!-- String value solicitud servicios -->
+    <string name="txtFiltro">Search Services</string>
+    <string name="txtFechaSolicitud">2018/04/24</string>
+    <string name="btnAgregar">Add Request</string>
+    <string name="btnVisualizarSolicitud">See Applications</string>
+
+
+
+    <!-- String value detalle servicio -->
+    <string name="txtCodigo">Serivice Code</string>
+    <string name="txtNombreServicio">Service name</string>
+    <string name="txtDescripcion">Description</string>
+    <string name="txtRecursosDisponibles">Available resources</string>
+    <string name="txtUbicacion">Location Service</string>
+    <string name="txtTipoServicio">Service type</string>
+    <string name="btnCancelar">cancel service</string>
+
+
+
+    <!-- String value button options -->
+    <string name="lblCrearSolicitud">Create service request</string>
+</resources>
