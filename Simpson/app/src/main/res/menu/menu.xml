@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_agregar"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory="1"
+        android:title="@string/agregar_personaje"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_modificar"
+        android:orderInCategory="3"
+        android:title="@string/modificar_posicion"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_eliminar"
+        android:orderInCategory="2"
+        android:title="@string/eliminar_personaje"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_idioma"
+        android:orderInCategory="4"
+        android:title="@string/lenguaje_app"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_cambiarIdioma"
+        android:orderInCategory="5"
+        android:icon="@drawable/ic_action_languaje"
+        app:showAsAction="always" />
+
+
+</menu>
