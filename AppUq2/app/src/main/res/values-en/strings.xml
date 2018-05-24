@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Login  -->
+    <string name="txtUsuario">User</string>
+    <string name="txtContrasena">Password</string>
+    <string name="txtIngresar">Login</string>
+    <string name="lblTitulo">Bienestar UQ</string>
+    <string name="lblDescripcion">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="txtRegistrarse">Register</string>
+</resources>
