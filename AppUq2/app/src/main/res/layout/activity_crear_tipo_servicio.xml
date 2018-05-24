@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrearTipoServicio">
+    tools:context=".CrearTipoServicio"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_aplicacion">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarTipoServicio"
+        android:background="@color/colorverde">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/toolbarTipoServicio"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+
+        <EditText
+            android:id="@+id/txtCodigoTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="@string/txtCodigoTipoServicio"
+            />
+
+        <EditText
+            android:id="@+id/txtNombreTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fondo_texto"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:gravity="center"
+            android:hint="@string/txtNombreTipoServicio"
+            />
+
+        <Button
+            android:id="@+id/btnGuardarTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="@string/btnGuardarTipoServicio"
+            android:textColor="@color/white"
+            android:background="@drawable/fondo_boton"
+            android:elevation="40dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

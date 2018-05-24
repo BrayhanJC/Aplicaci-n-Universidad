@@ -58,6 +58,12 @@
 
     <!-- Tipo de Servicios -->
     <string name="lblCrearTipoServicio">Crear Tipo Servicio</string>
+    <string name="txtCodigoTipoServicio">Código</string>
+    <string name="txtNombreTipoServicio">Tipo Servicio</string>
+    <string name="btnGuardarTipoServicio">Guardar</string>
+    <string name="toolbarTipoServicio">Registro Tipo Servicio</string>
+
+
 
 
 </resources>

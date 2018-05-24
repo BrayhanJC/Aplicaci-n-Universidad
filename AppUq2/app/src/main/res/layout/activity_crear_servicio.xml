@@ -11,7 +11,7 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbarRegistroCliente"
+        android:id="@+id/toolbarRegistro"
         android:background="@color/colorverde">
 
         <TextView
@@ -19,6 +19,7 @@
             android:layout_height="match_parent"
             android:text="@string/toolbarRegistrarServicio"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="25dp"
 
             />
@@ -47,7 +48,7 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/iv"
+                    android:id="@+id/imagenCrearServicio"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@mipmap/ic_launcher"
@@ -189,6 +190,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:text="@string/btnGuardarRegistrarServicio"
+            android:textColor="@color/white"
             android:background="@drawable/fondo_boton"
             android:elevation="40dp"/>
 

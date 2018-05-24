@@ -1,5 +1,6 @@
 package ds.appuq
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -19,7 +20,21 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         setContentView(R.layout.activity_principal)
         setSupportActionBar(toolbar)
 
+        fab_crear_encargado.setOnClickListener { view ->
+            val intent = Intent(this, CrearEncargado::class.java)
+            startActivity(intent)
+        }
 
+        fab_crear_servicio.setOnClickListener { view ->
+            val intent = Intent(this, CrearServicio::class.java)
+            startActivity(intent)
+        }
+
+
+        fab_crear_tipo_servicio.setOnClickListener { view ->
+            val intent = Intent(this, CrearTipoServicio::class.java)
+            startActivity(intent)
+        }
 /*        fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()

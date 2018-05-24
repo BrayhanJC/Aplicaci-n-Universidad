@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/toolbarRegistroEncargado"
+            android:textColor="@color/white"
             android:textAlignment="center"
             android:textSize="25dp"
 
@@ -106,6 +107,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:text="Guardar"
+            android:textColor="@color/white"
             android:background="@drawable/fondo_boton"
             android:elevation="40dp"/>
 

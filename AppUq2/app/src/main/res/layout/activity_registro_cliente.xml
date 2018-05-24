@@ -46,11 +46,10 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/lblImageRegistrarServicio"
+                    android:id="@+id/lblImageRegistrarCliente"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@mipmap/icono_foto" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -58,7 +57,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:orientation="vertical">
-
 
                 <EditText
                     android:id="@+id/txtCedulaRegistroCliente"
@@ -90,7 +88,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
 
         <EditText
             android:id="@+id/txtNombresRegistroCliente"
@@ -177,7 +174,6 @@
             android:singleLine="true"
             android:textSize="25dp" />
 
-
         <Button
             android:id="@+id/btnGuardarRegistroCliente"
             android:layout_width="match_parent"
@@ -191,11 +187,6 @@
             android:text="@string/btnGuardarRegistroCliente"
             android:textColor="@color/white"
             android:textSize="25dp" />
-
-
     </LinearLayout>
-
-
-
 
 </LinearLayout>
