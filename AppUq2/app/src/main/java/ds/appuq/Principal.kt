@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import ds.appuq.R.id.action_settings
+import ds.appuq.code.selecionarIdioma
 import kotlinx.android.synthetic.main.activity_principal.*
 import kotlinx.android.synthetic.main.app_bar_principal.*
 
@@ -71,9 +72,12 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_settings -> return true
-
-
+            R.id.action_settings ->{                selecionarIdioma(this)
+                val intent = this.intent
+                intent.flags = (Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                this.finish()
+                this.startActivity(intent)
+                return true}
 
             else -> return super.onOptionsItemSelected(item)
         }
@@ -84,7 +88,11 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         when (item.itemId) {
 
             R.id.nav_solicitud_servicios -> {
-
+                selecionarIdioma(this)
+                val intent = this.intent
+                intent.flags = (Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                this.finish()
+                this.startActivity(intent)
 
 
             }

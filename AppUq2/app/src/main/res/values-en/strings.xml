@@ -7,4 +7,53 @@
     <string name="lblTitulo">Bienestar UQ</string>
     <string name="lblDescripcion">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="txtRegistrarse">Register</string>
+
+    <!--Recuperar Contrasena -->
+    <string name="toolbarRecuperarContrasena">Recuperar Contraseña</string>
+    <string name="lblRecuperarContrasena">Enter the last password you remember to use in this application.</string>
+    <string name="txtRecuperarContrasena">Last Password</string>
+    <string name="btnRecuperarContrasena">Recover</string>
+
+    <!-- Registro cliente -->
+    <string name="toolbarRegistroCliente">Register</string>
+    <string name="txtCedulaRegistroCliente">Identification</string>
+    <string name="txtTipoRegistroCliente">Type</string>
+    <string name="txtNombresRegistroCliente">Names</string>
+    <string name="txtApellidosRegistroCliente">Last Names</string>
+    <string name="txtContrasenaRegistroCliente">Password</string>
+    <string name="txtRepetirContrasenaRegistroCliente">Repeat password</string>
+    <string name="txtDependenciaRegistroCliente">Dependence</string>
+    <string name="txtTelefonoRegistroCliente">Phone</string>
+    <string name="btnGuardarRegistroCliente">Save</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Encargado -->
+    <string name="lblCrearEncargado">Create Manager</string>
+    <string name="toolbarRegistroEncargado">Create Manager</string>
+
+    <!-- Servicios -->
+    <string name="lblCrearServicio">Create Service</string>
+    <string name="txtCodigoRegistrarServicio">Code</string>
+    <string name="txtNombreRegistrarServicio">Name</string>
+    <string name="txtDescripcionRegistrarServicio">Description</string>
+    <string name="txtUbicacionRegistrarServicio">Ubication</string>
+    <string name="txtRecursosDisponibles">Resources</string>
+    <string name="txtFechaInicialRegistrarServicio">Date Begin</string>
+    <string name="txtFechaFinalRegistrarServicio">Date End</string>
+    <string name="btnGuardarRegistrarServicio">Save</string>
+    <string name="toolbarRegistrarServicio">Create Service</string>
+
+    <!-- Tipo de Servicios -->
+    <string name="lblCrearTipoServicio">Create Type Service</string>
+    <string name="txtCodigoTipoServicio">Code</string>
+    <string name="txtNombreTipoServicio">Type Service</string>
+    <string name="btnGuardarTipoServicio">Save</string>
+    <string name="toolbarTipoServicio">Create Type Service</string>
+
 </resources>
