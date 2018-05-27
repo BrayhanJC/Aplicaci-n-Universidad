@@ -65,5 +65,8 @@
 
 
 
+    <string name= "facebook_app_id" > 233963680531025 </string>
+    <string name= "fb_login_protocol_scheme" > login_protocol_scheme </string>
+    <string name= "share_facebook" > Compartir </string>
 
 </resources>

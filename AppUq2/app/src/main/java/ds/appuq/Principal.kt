@@ -1,6 +1,7 @@
 package ds.appuq
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -10,6 +11,16 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
+import com.facebook.share.model.ShareHashtag
+import com.facebook.share.model.ShareLinkContent
+import com.facebook.share.widget.ShareDialog
 import ds.appuq.R.id.action_settings
 import ds.appuq.code.selecionarIdioma
 import kotlinx.android.synthetic.main.activity_principal.*
@@ -17,10 +28,28 @@ import kotlinx.android.synthetic.main.app_bar_principal.*
 
 class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    var callbackManager: CallbackManager?=null
+    var shareDialog : ShareDialog?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
         setSupportActionBar(toolbar)
+        shareDialog = ShareDialog( this )
+        callbackManager = CallbackManager.Factory.create()
+        LoginManager.getInstance().registerCallback( callbackManager ,
+                object : FacebookCallback<LoginResult> {
+                    override fun onSuccess (loginResult: LoginResult) {
+// App code
+                    }
+                    override fun onCancel () {
+// App code
+                    }
+                    override fun onError (exception: FacebookException) {
+// App code
+                    }
+                })
+
+
 
         fab_crear_encargado.setOnClickListener { view ->
             val intent = Intent(this, CrearEncargado::class.java)
@@ -124,5 +153,19 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
         transaction.replace(R.id.content_principal, fragmento)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+
+    fun compartirContenido(view: View){
+        if (ShareDialog.canShow(ShareLinkContent:: class . java )) {
+            val content = ShareLinkContent.Builder()
+                    .setContentUrl(Uri.parse( "https://www.youtube.com/watch?v=Zq8_XppDXdk" ))
+                    .setQuote( "Agregnado registro" )
+                    .setShareHashtag(ShareHashtag.Builder()
+                            .setHashtag( "#programando ando" )
+                            .build()).build()
+
+            shareDialog?.show(content)
+        }
     }
 }

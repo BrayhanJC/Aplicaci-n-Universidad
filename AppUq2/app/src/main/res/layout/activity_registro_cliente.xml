@@ -9,18 +9,63 @@
     android:background="@drawable/fondo_aplicacion">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarRegistroCliente"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/toolbarRegistroCliente"
         android:background="@color/colorverde">
 
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="@string/toolbarRegistroCliente"
-            android:textAlignment="center"
-            android:textSize="25dp"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toolbarRegistroCliente"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageButton
+                    android:id="@+id/btnCompartir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:background="@color/colorverde"
+                    android:onClick="compartirImageFacebook"
+                    app:srcCompat="@android:drawable/ic_menu_share" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+            <com.facebook.login.widget.LoginButton xmlns:facebook="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/login_button"
+                style="@style/FacebookLoginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:icon="@drawable/image_solicitud_servicios"
+                android:onClick="compartirContenido"
+                android:visibility="invisible"
+                facebook:com_facebook_login_text="@string/share_facebook"
+                facebook:com_facebook_logout_text="como asi" />
+
+
+
+
 
     </android.support.v7.widget.Toolbar>
 
@@ -184,9 +229,13 @@
             android:background="@drawable/fondo_boton"
             android:elevation="40dp"
             android:gravity="center"
+            android:onClick="guardarCliente"
             android:text="@string/btnGuardarRegistroCliente"
             android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            />
+
+
     </LinearLayout>
 
 </LinearLayout>
