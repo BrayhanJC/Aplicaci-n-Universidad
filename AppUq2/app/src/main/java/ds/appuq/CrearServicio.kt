@@ -56,6 +56,8 @@ class CrearServicio : AppCompatActivity() {
 
     lateinit var btn: Button
     lateinit var btnCompartir: ImageButton
+    lateinit var btnHacerTuit: ImageButton
+    lateinit var btnEliminar: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_servicio)
@@ -66,11 +68,13 @@ class CrearServicio : AppCompatActivity() {
         //val imageview = findViewById<View>(R.id.imagenCrearServicio) as ImageView
         //cargando=LoadImage(imageview, this)
         //imageview!!.setOnClickListener{cargando.showPictureDialog()}
-
+    inicializarTwitter(this)
 
         val imageview = findViewById<View>(R.id.imagenCrearServicio) as ImageView
         btn = findViewById<View>(R.id.btnGuardarRegistrarServicio) as Button
         btnCompartir = findViewById<View>(R.id.btnCompartir) as ImageButton
+        btnHacerTuit = findViewById<View>(R.id.btnHacerTuit) as ImageButton
+        btnEliminar = findViewById<View>(R.id.btnEliminar) as ImageButton
         cargando = LoadImage(imageview, this)
         imageview!!.setOnClickListener { cargando.showPictureDialog() }
 
@@ -108,13 +112,25 @@ class CrearServicio : AppCompatActivity() {
 
 
     }
+
+    fun eliminarServicio(view: View) {
+        val code:String = codigo.text.toString()
+        mDatabase!!.child("Servicio" + code).removeValue()
+        Toast.makeText(this, "Se ha eliminado \n el servicio", Toast.LENGTH_LONG).show()
+
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         cargando.onActivityResult(requestCode, resultCode, data)
     }
 
+    fun compartirTweet(view: View) {
+        val names:String = nombre.text.toString()
+        publicarTweet(view, "Nuevo servicio en la plataforma: "+names, this)
+    }
     fun compartirContenido(view: View) {
-        compartirContenidoFacebook(shareDialog, "Registro de Cliente", "#Vamos a seguir creciendo")
+        val names:String = nombre.text.toString()
+        compartirContenidoFacebook(shareDialog, "Nuevo Registro_de_servicio: " + names, "#Vamosaseguircreciendo")
     }
 
     fun compartirImageFacebook(view: View) {
@@ -147,9 +163,11 @@ class CrearServicio : AppCompatActivity() {
                 !TextUtils.isEmpty(ubication)) {
 
             mDatabase!!.child("Servicio" + code).setValue(Servicio(code, name, description, ubication, resource, date_begin, date_end, phone))
-            Toast.makeText(this, "Se ha guardado \n el cliente", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Se ha guardado \n el servicio", Toast.LENGTH_LONG).show()
             btn.setVisibility(View.INVISIBLE);
             btnCompartir.setVisibility(View.VISIBLE);
+            btnHacerTuit.setVisibility(View.VISIBLE);
+            btnEliminar.setVisibility(View.VISIBLE);
 
         } else {
             mostrarMensaje(this, "Debe de llenar todos los campos")

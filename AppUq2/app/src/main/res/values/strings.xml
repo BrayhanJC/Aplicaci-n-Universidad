@@ -70,4 +70,8 @@
     <string name= "fb_login_protocol_scheme" > login_protocol_scheme </string>
     <string name= "share_facebook" > Compartir </string>
 
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">ZFngBR3rvCxzvjJZm67g958xm</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">dUDQIZfTuAUrDLsfh30MZF8jn2yv19TJSrwEiZtiCHevURLvBK</string>
+
 </resources>

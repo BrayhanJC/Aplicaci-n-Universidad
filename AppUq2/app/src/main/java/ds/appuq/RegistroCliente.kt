@@ -1,11 +1,13 @@
 package ds.appuq
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.NotificationCompat
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.*
 import com.facebook.CallbackManager
@@ -17,10 +19,11 @@ import com.facebook.share.model.ShareHashtag
 import com.facebook.share.model.ShareLinkContent
 import com.facebook.share.widget.ShareDialog
 import com.google.firebase.database.*
-import ds.appuq.code.Cliente
-import ds.appuq.code.LoadImage
-import ds.appuq.code.compartirContenidoFacebook
-import ds.appuq.code.mostrarMensaje
+import com.twitter.sdk.android.core.DefaultLogger
+import com.twitter.sdk.android.core.Twitter
+import com.twitter.sdk.android.core.TwitterAuthConfig
+import com.twitter.sdk.android.core.TwitterConfig
+import ds.appuq.code.*
 
 class RegistroCliente : AppCompatActivity() {
 
@@ -54,7 +57,8 @@ class RegistroCliente : AppCompatActivity() {
     lateinit var imageview: ImageView
     lateinit var btn: Button
     lateinit var btnCompartir: ImageButton
-
+    lateinit var btnHacerTuit: ImageButton
+    lateinit var btnEliminar: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_cliente)
@@ -62,6 +66,8 @@ class RegistroCliente : AppCompatActivity() {
         imageview = findViewById<View>(R.id.lblImageRegistrarCliente) as ImageView
         btn = findViewById<View>(R.id.btnGuardarRegistroCliente) as Button
         btnCompartir = findViewById<View>(R.id.btnCompartir) as ImageButton
+        btnHacerTuit = findViewById<View>(R.id.btnHacerTuit) as ImageButton
+        btnEliminar = findViewById<View>(R.id.btnEliminar) as ImageButton
         cargando = LoadImage(imageview, this)
         imageview!!.setOnClickListener { cargando.showPictureDialog() }
 
@@ -74,7 +80,7 @@ class RegistroCliente : AppCompatActivity() {
         dependencia = findViewById<View>(R.id.txtDependenciaRegistroCliente) as EditText
         telefono = findViewById<View>(R.id.txtTelefonoRegistroCliente) as EditText
 
-
+    inicializarTwitter(this)
 
 
         mDatabase = FirebaseDatabase.getInstance().reference
@@ -99,17 +105,34 @@ class RegistroCliente : AppCompatActivity() {
 
     }
 
+
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         cargando.onActivityResult(requestCode, resultCode, data)
     }
 
+
+    fun eliminarCliente(view: View) {
+        val id:String = cedula.text.toString()
+        mDatabase!!.child("Cliente" + id).removeValue()
+        Toast.makeText(this, "Se ha eliminado \n el cliente", Toast.LENGTH_LONG).show()
+
+    }
     fun compartirContenido(view: View) {
-        compartirContenidoFacebook(shareDialog, "Registro de Cliente", "#Vamos a seguir creciendo")
+        val names:String = nombres.text.toString()
+        val lastnames:String = apellidos.text.toString()
+        compartirContenidoFacebook(shareDialog, "Nuevo Registro de Cliente: " + names + lastnames  , "#Vamosaseguircreciendo")
     }
 
     fun compartirImageFacebook(view: View) {
         compartirContenido(view)
+    }
+
+    fun compartirTweet(view: View) {
+        val names:String = nombres.text.toString()
+        val lastnames:String = apellidos.text.toString()
+        publicarTweet(view, "Nuevo cliente en la plataforma: "+names+" "+lastnames, this)
     }
 
     fun guardarCliente(view: View) {
@@ -144,11 +167,15 @@ class RegistroCliente : AppCompatActivity() {
             Toast.makeText(this, "Se ha guardado \n el cliente", Toast.LENGTH_LONG).show()
             btn.setVisibility(View.INVISIBLE);
             btnCompartir.setVisibility(View.VISIBLE);
+            btnHacerTuit.setVisibility(View.VISIBLE);
+            btnEliminar.setVisibility(View.VISIBLE);
 
         } else {
             mostrarMensaje(this, "Debe de llenar todos los campos")
         }
     }
+
+
 
 
 }

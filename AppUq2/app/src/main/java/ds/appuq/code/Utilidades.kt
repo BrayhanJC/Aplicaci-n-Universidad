@@ -4,11 +4,19 @@ import android.content.Context
 import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.facebook.share.model.ShareHashtag
 import com.facebook.share.model.ShareLinkContent
 import com.facebook.share.widget.ShareDialog
+import com.twitter.sdk.android.core.DefaultLogger
+import com.twitter.sdk.android.core.Twitter
+import com.twitter.sdk.android.core.TwitterAuthConfig
+import com.twitter.sdk.android.core.TwitterConfig
+import com.twitter.sdk.android.tweetcomposer.TweetComposer
+import ds.appuq.R
+import java.net.URL
 import java.util.*
 
 const val MIS_PREFERENCIAS = "MisPreferencias"
@@ -68,5 +76,27 @@ fun compartirContenidoFacebook(shareDialog: ShareDialog?, comentario:String, has
                         .build()).build()
 
         shareDialog?.show(content)
+    }
+}
+
+fun inicializarTwitter(context: Context){
+    val conf: TwitterConfig = TwitterConfig.Builder(context)
+            .logger(DefaultLogger(Log.DEBUG))
+            .twitterAuthConfig(TwitterAuthConfig(
+                    context.resources.getString(R.string.com_twitter_sdk_android_CONSUMER_KEY),
+                    context.resources.getString(R.string.com_twitter_sdk_android_CONSUMER_SECRET)))
+            .debug(true).build()
+    Twitter.initialize(conf)
+}
+
+fun publicarTweet(view:View, tweet:String, context: Context){
+    try {
+        val url = URL("https://www.youtube.com/watch?v=VV9IRQSxx6w")
+        val builder: TweetComposer.Builder = TweetComposer.Builder(context)
+                .text(tweet);
+        builder.show()
+    }
+    catch (e:Exception){
+        e.printStackTrace()
     }
 }

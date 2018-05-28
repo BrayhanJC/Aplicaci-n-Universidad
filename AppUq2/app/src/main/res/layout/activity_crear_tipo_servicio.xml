@@ -76,6 +76,24 @@
             android:textColor="@color/white"
             android:background="@drawable/fondo_boton"
             android:elevation="40dp"/>
+
+        <Button
+            android:id="@+id/btnHacerTuit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#55ACEE"
+            android:layout_marginTop="30dp"
+            android:onClick="coso"
+            android:text="Hacer tweet"
+
+            android:textColor="#FFFFFF"/>
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/twitterLoginButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:onClick="compartirTwitter"
+            android:visibility="invisible"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 
