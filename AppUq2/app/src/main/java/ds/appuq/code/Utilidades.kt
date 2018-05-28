@@ -3,6 +3,8 @@ package ds.appuq.code
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Build
+import android.view.View
+import android.widget.Toast
 import java.util.*
 
 const val MIS_PREFERENCIAS = "MisPreferencias"
@@ -45,4 +47,9 @@ fun cambiarIdioma(context: Context) {
         config.locale = local
     }
     context.resources.updateConfiguration(config, null)
+}
+
+
+ fun mostrarMensaje(context: Context, mensaje:String ){
+    Toast.makeText(context, mensaje, Toast.LENGTH_LONG).show()
 }
