@@ -19,6 +19,7 @@ import com.facebook.share.widget.ShareDialog
 import com.google.firebase.database.*
 import ds.appuq.code.Cliente
 import ds.appuq.code.LoadImage
+import ds.appuq.code.compartirContenidoFacebook
 import ds.appuq.code.mostrarMensaje
 
 class RegistroCliente : AppCompatActivity() {
@@ -31,36 +32,50 @@ class RegistroCliente : AppCompatActivity() {
     private var mMessageReference: DatabaseReference? = null
 
 
-
     lateinit var cedula: EditText
-    lateinit var codigo:EditText
-    lateinit var nombres:EditText
-    lateinit var apellidos:EditText
-    lateinit var contrasena:EditText
-    lateinit var repetirContrasena:EditText
-    lateinit var dependencia:EditText
-    lateinit var telefono:EditText
+    lateinit var codigo: EditText
+    lateinit var nombres: EditText
+    lateinit var apellidos: EditText
+    lateinit var contrasena: EditText
+    lateinit var repetirContrasena: EditText
+    lateinit var dependencia: EditText
+    lateinit var telefono: EditText
 
+
+    lateinit var id: String
+    lateinit var names: String
+    lateinit var lastnames: String
+    lateinit var type: String
+    lateinit var pass: String
+    lateinit var repeatPass: String
+    lateinit var dependency: String
+    lateinit var phone: String
+
+    lateinit var imageview: ImageView
     lateinit var btn: Button
     lateinit var btnCompartir: ImageButton
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_cliente)
 
-        val imageview = findViewById<View>(R.id.lblImageRegistrarCliente) as ImageView
+        imageview = findViewById<View>(R.id.lblImageRegistrarCliente) as ImageView
         btn = findViewById<View>(R.id.btnGuardarRegistroCliente) as Button
         btnCompartir = findViewById<View>(R.id.btnCompartir) as ImageButton
         cargando = LoadImage(imageview, this)
         imageview!!.setOnClickListener { cargando.showPictureDialog() }
 
-        cedula=  findViewById<View>(R.id.txtCedulaRegistroCliente) as EditText
-        codigo=  findViewById<View>(R.id.txtCedulaRegistroCliente) as EditText
-        nombres=  findViewById<View>(R.id.txtNombresRegistroCliente) as EditText
-        apellidos=  findViewById<View>(R.id.txtApellidosRegistroCliente) as EditText
-        contrasena=  findViewById<View>(R.id.txtContrasenaRegistroCliente) as EditText
-        repetirContrasena=  findViewById<View>(R.id.txtRepetirContrasenaRegistroCliente) as EditText
-        dependencia=  findViewById<View>(R.id.txtDependenciaRegistroCliente) as EditText
-        telefono=  findViewById<View>(R.id.txtTelefonoRegistroCliente) as EditText
+        cedula = findViewById<View>(R.id.txtCedulaRegistroCliente) as EditText
+        codigo = findViewById<View>(R.id.txtCedulaRegistroCliente) as EditText
+        nombres = findViewById<View>(R.id.txtNombresRegistroCliente) as EditText
+        apellidos = findViewById<View>(R.id.txtApellidosRegistroCliente) as EditText
+        contrasena = findViewById<View>(R.id.txtContrasenaRegistroCliente) as EditText
+        repetirContrasena = findViewById<View>(R.id.txtRepetirContrasenaRegistroCliente) as EditText
+        dependencia = findViewById<View>(R.id.txtDependenciaRegistroCliente) as EditText
+        telefono = findViewById<View>(R.id.txtTelefonoRegistroCliente) as EditText
+
+
+
 
         mDatabase = FirebaseDatabase.getInstance().reference
         mMessageReference = FirebaseDatabase.getInstance().getReference("Cliente")
@@ -90,16 +105,7 @@ class RegistroCliente : AppCompatActivity() {
     }
 
     fun compartirContenido(view: View) {
-        if (ShareDialog.canShow(ShareLinkContent::class.java)) {
-            val content = ShareLinkContent.Builder()
-                    .setContentUrl(Uri.parse("https://www.youtube.com/watch?v=Zq8_XppDXdk"))
-                    .setQuote("Agregnado registro")
-                    .setShareHashtag(ShareHashtag.Builder()
-                            .setHashtag("#programando ando")
-                            .build()).build()
-
-            shareDialog?.show(content)
-        }
+        compartirContenidoFacebook(shareDialog, "Registro de Cliente", "#Vamos a seguir creciendo")
     }
 
     fun compartirImageFacebook(view: View) {
@@ -109,24 +115,21 @@ class RegistroCliente : AppCompatActivity() {
     fun guardarCliente(view: View) {
 
 
-
-
-
         obtenerDatos()
-       // val message = NotificationCompat.MessagingStyle.Message()
+        // val message = NotificationCompat.MessagingStyle.Message()
 
     }
 
-    fun obtenerDatos(){
-        val id:String=cedula.text.toString()
-        val names:String=nombres.text.toString()
-        val lastnames:String=apellidos.text.toString()
-        val type:String=codigo.text.toString()
-        val pass:String=contrasena.text.toString()
-        val repeatPass:String=repetirContrasena.text.toString()
-        val dependency:String=dependencia.text.toString()
-        val phone:String=telefono.text.toString()
-       // mostrarMensaje(this,id+type+names+ lastnames+ pass+ repeatPass+ dependency+ phone)
+    fun obtenerDatos() {
+        val id:String = cedula.text.toString()
+        val names:String = nombres.text.toString()
+        val lastnames:String = apellidos.text.toString()
+        val type:String = codigo.text.toString()
+        val pass:String = contrasena.text.toString()
+        val repeatPass:String = repetirContrasena.text.toString()
+        val dependency:String= dependencia.text.toString()
+        val phone:String = telefono.text.toString()
+         mostrarMensaje(this,id+type+names+ lastnames+ pass+ repeatPass+ dependency+ phone)
 
         if (!TextUtils.isEmpty(id) &&
                 !TextUtils.isEmpty(names) &&
@@ -135,19 +138,17 @@ class RegistroCliente : AppCompatActivity() {
                 !TextUtils.isEmpty(pass) &&
                 !TextUtils.isEmpty(repeatPass) &&
                 !TextUtils.isEmpty(dependency) &&
-                !TextUtils.isEmpty(phone)){
+                !TextUtils.isEmpty(phone)) {
 
-            mDatabase!!.child(id).setValue(Cliente(id,type,names, lastnames, pass, repeatPass, dependency, phone ))
+            mDatabase!!.child("Cliente" + id).setValue(Cliente(id, type, names, lastnames, pass, repeatPass, dependency, phone))
             Toast.makeText(this, "Se ha guardado \n el cliente", Toast.LENGTH_LONG).show()
             btn.setVisibility(View.INVISIBLE);
             btnCompartir.setVisibility(View.VISIBLE);
 
-        }else{
-            mostrarMensaje(this,"Debe de llenar todos los campos")
+        } else {
+            mostrarMensaje(this, "Debe de llenar todos los campos")
         }
     }
-
-
 
 
 }

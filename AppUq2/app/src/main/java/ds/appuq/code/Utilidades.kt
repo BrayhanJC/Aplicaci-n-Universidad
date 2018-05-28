@@ -2,9 +2,13 @@ package ds.appuq.code
 
 import android.content.Context
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Build
 import android.view.View
 import android.widget.Toast
+import com.facebook.share.model.ShareHashtag
+import com.facebook.share.model.ShareLinkContent
+import com.facebook.share.widget.ShareDialog
 import java.util.*
 
 const val MIS_PREFERENCIAS = "MisPreferencias"
@@ -52,4 +56,17 @@ fun cambiarIdioma(context: Context) {
 
  fun mostrarMensaje(context: Context, mensaje:String ){
     Toast.makeText(context, mensaje, Toast.LENGTH_LONG).show()
+}
+
+fun compartirContenidoFacebook(shareDialog: ShareDialog?, comentario:String, hastag:String) {
+    if (ShareDialog.canShow(ShareLinkContent::class.java)) {
+        val content = ShareLinkContent.Builder()
+                .setContentUrl(Uri.parse("https://www.youtube.com/watch?v=Zq8_XppDXdk"))
+                .setQuote(comentario)
+                .setShareHashtag(ShareHashtag.Builder()
+                        .setHashtag(hastag)
+                        .build()).build()
+
+        shareDialog?.show(content)
+    }
 }
