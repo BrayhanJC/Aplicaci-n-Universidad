@@ -52,6 +52,7 @@
     <string name="txtRecursosDisponibles">Recursos</string>
     <string name="txtFechaInicialRegistrarServicio">Fecha Inicio</string>
     <string name="txtFechaFinalRegistrarServicio">Fecha Fin</string>
+    <string name="txtTelefonoRegistrarServicio">Fecha Fin</string>
     <string name="btnGuardarRegistrarServicio">Guardar</string>
     <string name="toolbarRegistrarServicio">Crear Servicio</string>
 

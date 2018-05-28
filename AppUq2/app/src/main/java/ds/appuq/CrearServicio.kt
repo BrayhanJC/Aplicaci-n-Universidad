@@ -22,10 +22,7 @@ import com.facebook.login.LoginResult
 import com.facebook.share.widget.ShareDialog
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import ds.appuq.code.Cliente
-import ds.appuq.code.LoadImage
-import ds.appuq.code.compartirContenidoFacebook
-import ds.appuq.code.mostrarMensaje
+import ds.appuq.code.*
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -46,14 +43,16 @@ class CrearServicio : AppCompatActivity() {
 
 
 
-    lateinit var cedula: EditText
     lateinit var codigo: EditText
-    lateinit var nombres: EditText
-    lateinit var apellidos: EditText
-    lateinit var contrasena: EditText
-    lateinit var repetirContrasena: EditText
-    lateinit var dependencia: EditText
+    lateinit var nombre: EditText
+    lateinit var descripcion: EditText
+    lateinit var ubicacion: EditText
+    lateinit var recursos: EditText
+    lateinit var fecha_incio: EditText
+    lateinit var fecha_fin: EditText
     lateinit var telefono: EditText
+
+
 
     lateinit var btn: Button
     lateinit var btnCompartir: ImageButton
@@ -75,14 +74,15 @@ class CrearServicio : AppCompatActivity() {
         cargando = LoadImage(imageview, this)
         imageview!!.setOnClickListener { cargando.showPictureDialog() }
 
-        cedula=  findViewById<View>(R.id.txtCedulaRegistroCliente) as EditText
-        codigo=  findViewById<View>(R.id.txtCedulaRegistroCliente) as EditText
-        nombres=  findViewById<View>(R.id.txtNombresRegistroCliente) as EditText
-        apellidos=  findViewById<View>(R.id.txtApellidosRegistroCliente) as EditText
-        contrasena=  findViewById<View>(R.id.txtContrasenaRegistroCliente) as EditText
-        repetirContrasena=  findViewById<View>(R.id.txtRepetirContrasenaRegistroCliente) as EditText
-        dependencia=  findViewById<View>(R.id.txtDependenciaRegistroCliente) as EditText
-        telefono=  findViewById<View>(R.id.txtTelefonoRegistroCliente) as EditText
+
+        codigo=  findViewById<View>(R.id.txtCodigoRegistrarServicio) as EditText
+        nombre=  findViewById<View>(R.id.txtNombreRegistrarServicio) as EditText
+        descripcion=  findViewById<View>(R.id.txtDescripcionRegistrarServicio) as EditText
+        ubicacion=  findViewById<View>(R.id.txtUbicacionRegistrarServicio) as EditText
+        recursos=  findViewById<View>(R.id.txtRecursosDisponiblesRegistrarServicio) as EditText
+        fecha_incio=  findViewById<View>(R.id.txtFechaInicialRegistrarServicio) as EditText
+        fecha_fin=  findViewById<View>(R.id.txtFechaFinalRegistrarServicio) as EditText
+        telefono=  findViewById<View>(R.id.txtTelefonoRegistrarServicio) as EditText
 
         mDatabase = FirebaseDatabase.getInstance().reference
         mMessageReference = FirebaseDatabase.getInstance().getReference("Cliente")
@@ -125,26 +125,28 @@ class CrearServicio : AppCompatActivity() {
         obtenerDatos()
     }
     fun obtenerDatos() {
-        val id:String = cedula.text.toString()
-        val names:String = nombres.text.toString()
-        val lastnames:String = apellidos.text.toString()
-        val type:String = codigo.text.toString()
-        val pass:String = contrasena.text.toString()
-        val repeatPass:String = repetirContrasena.text.toString()
-        val dependency:String= dependencia.text.toString()
-        val phone:String = telefono.text.toString()
-        mostrarMensaje(this,id+type+names+ lastnames+ pass+ repeatPass+ dependency+ phone)
 
-        if (!TextUtils.isEmpty(id) &&
-                !TextUtils.isEmpty(names) &&
-                !TextUtils.isEmpty(lastnames) &&
-                !TextUtils.isEmpty(type) &&
-                !TextUtils.isEmpty(pass) &&
-                !TextUtils.isEmpty(repeatPass) &&
-                !TextUtils.isEmpty(dependency) &&
-                !TextUtils.isEmpty(phone)) {
 
-            mDatabase!!.child("Cliente" + id).setValue(Cliente(id, type, names, lastnames, pass, repeatPass, dependency, phone))
+        val code:String = codigo.text.toString()
+        val name:String = nombre.text.toString()
+        val description:String = descripcion.text.toString()
+        val ubication:String = ubicacion.text.toString()
+        val resource:String = recursos.text.toString()
+        val date_begin:String = fecha_incio.text.toString()
+        val date_end:String = fecha_fin.text.toString()
+        val phone:String= telefono.text.toString()
+
+
+        if (!TextUtils.isEmpty(code) &&
+                !TextUtils.isEmpty(name) &&
+                !TextUtils.isEmpty(description) &&
+                !TextUtils.isEmpty(resource) &&
+                !TextUtils.isEmpty(date_begin) &&
+                !TextUtils.isEmpty(date_end) &&
+                !TextUtils.isEmpty(phone)&&
+                !TextUtils.isEmpty(ubication)) {
+
+            mDatabase!!.child("Servicio" + code).setValue(Servicio(code, name, description, ubication, resource, date_begin, date_end, phone))
             Toast.makeText(this, "Se ha guardado \n el cliente", Toast.LENGTH_LONG).show()
             btn.setVisibility(View.INVISIBLE);
             btnCompartir.setVisibility(View.VISIBLE);
